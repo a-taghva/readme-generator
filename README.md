@@ -5,7 +5,7 @@
 * [Description](#description)
 * [Installation](#installation)
 * [License](#license)
-* [Technology used](#built%20with)
+* [Demo](#demo)
 * [Contribution](#contribution)
 
 ## Description
@@ -18,8 +18,9 @@ And also download required modules.(inquirer)
 ## License
 This project is licensed under the MIT license.
 
-## Built with
-* JavaScript/Node.js
+## Demo
+[Demo of application](https://www.youtube.com/watch?v=F9q4qv-rn_Y)
+This application was built with: JavaScript/Node
 
 ### Screenshot of application interface:
 ---
