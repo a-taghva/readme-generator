@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const fs = require('fs');
+const writeFile = require('./utils/generate-markdown');
 const inquirer = require('inquirer');
 const markdownTemplate = require('./utils/markdown-template');
 
@@ -92,11 +92,14 @@ const questions = [
 ];
 
 inquirer.prompt(questions)
-    .then(data =>  markdownTemplate(data));
+    .then(data =>  markdownTemplate(data))
+    .then(pageTemplate => {
+        return writeFile(pageTemplate);
+    })
+    .then(writeFileResponse => console.log(writeFileResponse))
+    .catch(err => console.log(err));
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+    
 // TODO: Create a function to initialize app
 function init() {}
 
