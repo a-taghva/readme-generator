@@ -20,6 +20,8 @@ This project is licensed under the MIT license.
 
 ## Demo
 [Demo of application](https://www.youtube.com/watch?v=F9q4qv-rn_Y)
+<br />
+<br />
 This application was built with: JavaScript/Node
 
 ### Screenshot of application interface:
