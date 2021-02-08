@@ -7,22 +7,46 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'What is your GitHub username?',
+        message: 'What is your GitHub username?(Required)',
+        validate: github => {
+            if (github) return true;
+
+            console.log('Please enter your GitHub username!')
+            return false;
+        },
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
+        message: 'What is your email address?(Required)',
+        validate: email => {
+            if (email) return true;
+
+            console.log('Please enter your email address!')
+            return false;
+        },
     },
     {
         type: 'input',
         name: 'title',
-        message: 'What is your project\'s name?',
+        message: 'What is your project\'s name?(Required)',
+        validate: title => {
+            if (title) return true;
+
+            console.log('Please enter your project\'s name!');
+            return false;
+        },
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a short description of your project:'
+        message: 'Please write a short description of your project:(Required)',
+        validate: description => {
+            if (description) return true;
+
+            console.log('Please enter a description of your project!');
+            return false;
+        },
     },
     {
         type: 'list',
@@ -38,19 +62,31 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'testCommand',
+        name: 'tests',
         message: 'What command should be run to run tests?',
         default: 'npm test',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'What does user need to know about using the repo?',
+        message: 'What does user need to know about using the repo?(Required)',
+        validate: usage => {
+            if (usage) return true;
+
+            console.log('Answer the question dude!!')
+            return false;
+        }
     },
     {
         type: 'input',
         name: 'contribution',
-        message: 'What does the user need to know about contributing to the repo?',
+        message: 'What does the user need to know about contributing to the repo?(Required)',
+        validate: contribution => {
+            if (contribution) return true;
+
+            console.log('Please enter what user need to know...');
+            return false;
+        }
     }
 ];
 
