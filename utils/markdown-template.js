@@ -16,6 +16,7 @@ const renderLicenseSection = license => {
 
   return `
   ## License
+  ---
   This project is licensed under the ${license} license.
   `;
 };
@@ -24,44 +25,51 @@ const writeLicense = license => (license === "None") ? '' : `* [License](#licens
   
   // TODO: Create a function to generate markdown for README
 function generateTemplate(data) {
-  return `# ${data.title}
+  return `
+# ${data.title}
 
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  ${writeLicense(data.license)}
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  
-  ## Description
-  ${data.description}
+## Table of Contents
+---
+* [Installation](#installation)
+* [Usage](#usage)
+${writeLicense(data.license)}
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-  ## Installation
-  To install necessary dependencies, run the following command:
+## Description
+---
+${data.description}
 
-  \`\`\`
-  ${data.installation}
-  \`\`\`
+## Installation
+---
+To install necessary dependencies, run the following command:
 
-  ## Usage
-  ${data.usage}
-  ${renderLicenseSection(data.license)}
-  ## Contributing
-  ${data.contribution}
+\`\`\`
+${data.installation}
+\`\`\`
 
-  ## Tests
-  To run tests, run the following command:
+## Usage
+---
+${data.usage}
+${renderLicenseSection(data.license)}
+## Contributing
+${data.contribution}
 
-  \`\`\`
-  npm test
-  \`\`\`
+## Tests
+---
+To run tests, run the following command:
 
-  ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
-  You can find more of my work at my [GitHub](https://github.com/${data.github});
+\`\`\`
+npm test
+\`\`\`
+
+## Questions
+---
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
+You can find more of my work at my [GitHub](https://github.com/${data.github});
 
   `;
 };
