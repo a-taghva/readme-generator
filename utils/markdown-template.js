@@ -32,6 +32,7 @@ ${renderLicenseBadge(data.license)}
 
 ## Table of Contents
 ---
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 ${writeLicense(data.license)}
@@ -69,7 +70,7 @@ npm test
 
 ## Questions
 ---
-If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}.<br />
 You can find more of my work at my [GitHub](https://github.com/${data.github});
 
   `;
