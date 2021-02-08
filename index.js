@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+const markdownTemplate = require('./utils/markdown-template');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -92,7 +92,7 @@ const questions = [
 ];
 
 inquirer.prompt(questions)
-    .then(data =>  generateMarkdown(data));
+    .then(data =>  markdownTemplate(data));
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
